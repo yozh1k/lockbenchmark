@@ -1,0 +1,850 @@
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.LockBenchmark.coreCountThreadMeasure
+
+# Run progress: 0,00% complete, ETA 01:23:20
+# Fork: 1 of 5
+# Warmup Iteration   1: 11151767,764 ops/s
+# Warmup Iteration   2: 13276329,608 ops/s
+# Warmup Iteration   3: 14526724,592 ops/s
+# Warmup Iteration   4: 12964749,733 ops/s
+# Warmup Iteration   5: 13554873,439 ops/s
+Iteration   1: 13505220,351 ops/s
+Iteration   2: 13795894,508 ops/s
+Iteration   3: 13562084,786 ops/s
+Iteration   4: 13581420,104 ops/s
+Iteration   5: 13587799,922 ops/s
+
+# Run progress: 2,00% complete, ETA 01:21:55
+# Fork: 2 of 5
+# Warmup Iteration   1: 11923826,000 ops/s
+# Warmup Iteration   2: 13554913,447 ops/s
+# Warmup Iteration   3: 11735288,208 ops/s
+# Warmup Iteration   4: 12838100,731 ops/s
+# Warmup Iteration   5: 11675294,398 ops/s
+Iteration   1: 12511326,168 ops/s
+Iteration   2: 12803251,641 ops/s
+Iteration   3: 11714570,610 ops/s
+Iteration   4: 12124596,442 ops/s
+Iteration   5: 11863889,041 ops/s
+
+# Run progress: 4,00% complete, ETA 01:20:13
+# Fork: 3 of 5
+# Warmup Iteration   1: 13779152,841 ops/s
+# Warmup Iteration   2: 12175639,280 ops/s
+# Warmup Iteration   3: 11813697,658 ops/s
+# Warmup Iteration   4: 11542722,612 ops/s
+# Warmup Iteration   5: 11636031,214 ops/s
+Iteration   1: 12702491,741 ops/s
+Iteration   2: 11286684,630 ops/s
+Iteration   3: 12757593,260 ops/s
+Iteration   4: 12939001,622 ops/s
+Iteration   5: 11803356,023 ops/s
+
+# Run progress: 6,00% complete, ETA 01:18:32
+# Fork: 4 of 5
+# Warmup Iteration   1: 13377541,966 ops/s
+# Warmup Iteration   2: 12877174,412 ops/s
+# Warmup Iteration   3: 12443928,837 ops/s
+# Warmup Iteration   4: 11795352,031 ops/s
+# Warmup Iteration   5: 11490384,761 ops/s
+Iteration   1: 12578200,670 ops/s
+Iteration   2: 12916548,778 ops/s
+Iteration   3: 12672916,082 ops/s
+Iteration   4: 10939976,375 ops/s
+Iteration   5: 12496592,888 ops/s
+
+# Run progress: 8,00% complete, ETA 01:16:52
+# Fork: 5 of 5
+# Warmup Iteration   1: 13560825,317 ops/s
+# Warmup Iteration   2: 12359207,423 ops/s
+# Warmup Iteration   3: 13442812,741 ops/s
+# Warmup Iteration   4: 12902918,237 ops/s
+# Warmup Iteration   5: 13567663,809 ops/s
+Iteration   1: 12932977,058 ops/s
+Iteration   2: 12715129,448 ops/s
+Iteration   3: 13642809,991 ops/s
+Iteration   4: 12906574,227 ops/s
+Iteration   5: 12847605,963 ops/s
+
+
+Result "ru.kildishev.LockBenchmark.coreCountThreadMeasure":
+  12687540,493 ±(99.9%) 557056,292 ops/s [Average]
+  (min, avg, max) = (10939976,375, 12687540,493, 13795894,508), stdev = 743654,213
+  CI (99.9%): [12130484,201, 13244596,786] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.LockBenchmark.singleThreadMeasure
+
+# Run progress: 10,00% complete, ETA 01:15:12
+# Fork: 1 of 5
+# Warmup Iteration   1: 52047544,804 ops/s
+# Warmup Iteration   2: 47677673,945 ops/s
+# Warmup Iteration   3: 47495327,748 ops/s
+# Warmup Iteration   4: 47529084,644 ops/s
+# Warmup Iteration   5: 47549578,120 ops/s
+Iteration   1: 47728093,465 ops/s
+Iteration   2: 52127476,473 ops/s
+Iteration   3: 47746782,806 ops/s
+Iteration   4: 47713027,374 ops/s
+Iteration   5: 47736073,097 ops/s
+
+# Run progress: 12,00% complete, ETA 01:13:31
+# Fork: 2 of 5
+# Warmup Iteration   1: 51025121,137 ops/s
+# Warmup Iteration   2: 47563438,491 ops/s
+# Warmup Iteration   3: 47502819,484 ops/s
+# Warmup Iteration   4: 47421758,675 ops/s
+# Warmup Iteration   5: 47569553,253 ops/s
+Iteration   1: 47734321,912 ops/s
+Iteration   2: 52066766,817 ops/s
+Iteration   3: 47723920,821 ops/s
+Iteration   4: 47723553,395 ops/s
+Iteration   5: 47720436,647 ops/s
+
+# Run progress: 14,00% complete, ETA 01:11:51
+# Fork: 3 of 5
+# Warmup Iteration   1: 52001203,526 ops/s
+# Warmup Iteration   2: 47750271,783 ops/s
+# Warmup Iteration   3: 47795757,881 ops/s
+# Warmup Iteration   4: 47789493,584 ops/s
+# Warmup Iteration   5: 47591948,625 ops/s
+Iteration   1: 47782230,724 ops/s
+Iteration   2: 52119585,501 ops/s
+Iteration   3: 47776331,592 ops/s
+Iteration   4: 47778868,293 ops/s
+Iteration   5: 47774299,643 ops/s
+
+# Run progress: 16,00% complete, ETA 01:10:10
+# Fork: 4 of 5
+# Warmup Iteration   1: 52033961,215 ops/s
+# Warmup Iteration   2: 47730692,991 ops/s
+# Warmup Iteration   3: 47773539,011 ops/s
+# Warmup Iteration   4: 47771893,372 ops/s
+# Warmup Iteration   5: 47765256,149 ops/s
+Iteration   1: 47772167,264 ops/s
+Iteration   2: 52106140,010 ops/s
+Iteration   3: 47763891,077 ops/s
+Iteration   4: 47758586,487 ops/s
+Iteration   5: 47769911,742 ops/s
+
+# Run progress: 18,00% complete, ETA 01:08:30
+# Fork: 5 of 5
+# Warmup Iteration   1: 51992960,870 ops/s
+# Warmup Iteration   2: 47731485,373 ops/s
+# Warmup Iteration   3: 47768954,195 ops/s
+# Warmup Iteration   4: 47708047,345 ops/s
+# Warmup Iteration   5: 47733629,492 ops/s
+Iteration   1: 47733632,954 ops/s
+Iteration   2: 52043596,071 ops/s
+Iteration   3: 47730000,223 ops/s
+Iteration   4: 47720896,285 ops/s
+Iteration   5: 47721145,562 ops/s
+
+
+Result "ru.kildishev.LockBenchmark.singleThreadMeasure":
+  48614869,449 ±(99.9%) 1329591,944 ops/s [Average]
+  (min, avg, max) = (47713027,374, 48614869,449, 52127476,473), stdev = 1774967,206
+  CI (99.9%): [47285277,505, 49944461,394] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.LockBenchmark.twoThreadMeasure
+
+# Run progress: 20,00% complete, ETA 01:06:49
+# Fork: 1 of 5
+# Warmup Iteration   1: 8646896,181 ops/s
+# Warmup Iteration   2: 8400237,086 ops/s
+# Warmup Iteration   3: 8527241,637 ops/s
+# Warmup Iteration   4: 8263825,445 ops/s
+# Warmup Iteration   5: 8226976,691 ops/s
+Iteration   1: 7845730,228 ops/s
+Iteration   2: 8101331,461 ops/s
+Iteration   3: 7910933,351 ops/s
+Iteration   4: 7859596,181 ops/s
+Iteration   5: 8267942,676 ops/s
+
+# Run progress: 22,00% complete, ETA 01:05:09
+# Fork: 2 of 5
+# Warmup Iteration   1: 8149313,938 ops/s
+# Warmup Iteration   2: 7952460,167 ops/s
+# Warmup Iteration   3: 8072612,642 ops/s
+# Warmup Iteration   4: 7426668,155 ops/s
+# Warmup Iteration   5: 8055326,542 ops/s
+Iteration   1: 7353249,168 ops/s
+Iteration   2: 8031748,639 ops/s
+Iteration   3: 8300208,292 ops/s
+Iteration   4: 8652175,579 ops/s
+Iteration   5: 8069929,610 ops/s
+
+# Run progress: 24,00% complete, ETA 01:03:29
+# Fork: 3 of 5
+# Warmup Iteration   1: 8295238,014 ops/s
+# Warmup Iteration   2: 8257989,170 ops/s
+# Warmup Iteration   3: 8279466,722 ops/s
+# Warmup Iteration   4: 7831697,065 ops/s
+# Warmup Iteration   5: 7948359,285 ops/s
+Iteration   1: 8091441,697 ops/s
+Iteration   2: 8185266,277 ops/s
+Iteration   3: 8241647,829 ops/s
+Iteration   4: 8024875,627 ops/s
+Iteration   5: 8098116,640 ops/s
+
+# Run progress: 26,00% complete, ETA 01:01:49
+# Fork: 4 of 5
+# Warmup Iteration   1: 8419433,001 ops/s
+# Warmup Iteration   2: 8336809,402 ops/s
+# Warmup Iteration   3: 8530806,677 ops/s
+# Warmup Iteration   4: 8317392,187 ops/s
+# Warmup Iteration   5: 8235646,009 ops/s
+Iteration   1: 7980721,503 ops/s
+Iteration   2: 8327438,604 ops/s
+Iteration   3: 8561610,848 ops/s
+Iteration   4: 8258468,498 ops/s
+Iteration   5: 8651216,633 ops/s
+
+# Run progress: 28,00% complete, ETA 01:00:08
+# Fork: 5 of 5
+# Warmup Iteration   1: 8347597,827 ops/s
+# Warmup Iteration   2: 8437884,545 ops/s
+# Warmup Iteration   3: 8182733,707 ops/s
+# Warmup Iteration   4: 8125689,643 ops/s
+# Warmup Iteration   5: 8134596,569 ops/s
+Iteration   1: 8395400,338 ops/s
+Iteration   2: 7910128,828 ops/s
+Iteration   3: 8157240,022 ops/s
+Iteration   4: 8403163,235 ops/s
+Iteration   5: 8168842,262 ops/s
+
+
+Result "ru.kildishev.LockBenchmark.twoThreadMeasure":
+  8153936,961 ±(99.9%) 209994,856 ops/s [Average]
+  (min, avg, max) = (7353249,168, 8153936,961, 8652175,579), stdev = 280337,125
+  CI (99.9%): [7943942,105, 8363931,817] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.NonThreadSafeBenchmark.singleThreadMeasure
+
+# Run progress: 30,00% complete, ETA 00:58:28
+# Fork: 1 of 5
+# Warmup Iteration   1: 182293468,614 ops/s
+# Warmup Iteration   2: 182308611,465 ops/s
+# Warmup Iteration   3: 182360301,514 ops/s
+# Warmup Iteration   4: 182419405,883 ops/s
+# Warmup Iteration   5: 182040132,219 ops/s
+Iteration   1: 182457333,611 ops/s
+Iteration   2: 182136318,564 ops/s
+Iteration   3: 182286326,013 ops/s
+Iteration   4: 182434656,057 ops/s
+Iteration   5: 182420441,161 ops/s
+
+# Run progress: 32,00% complete, ETA 00:56:48
+# Fork: 2 of 5
+# Warmup Iteration   1: 182135228,430 ops/s
+# Warmup Iteration   2: 182357796,459 ops/s
+# Warmup Iteration   3: 182375889,765 ops/s
+# Warmup Iteration   4: 182301333,529 ops/s
+# Warmup Iteration   5: 182211116,414 ops/s
+Iteration   1: 182465182,468 ops/s
+Iteration   2: 182400268,870 ops/s
+Iteration   3: 182429215,817 ops/s
+Iteration   4: 182428716,854 ops/s
+Iteration   5: 182333639,760 ops/s
+
+# Run progress: 34,00% complete, ETA 00:55:07
+# Fork: 3 of 5
+# Warmup Iteration   1: 182337765,487 ops/s
+# Warmup Iteration   2: 182312894,935 ops/s
+# Warmup Iteration   3: 182257627,597 ops/s
+# Warmup Iteration   4: 182323349,505 ops/s
+# Warmup Iteration   5: 182477360,935 ops/s
+Iteration   1: 182226804,509 ops/s
+Iteration   2: 182449011,778 ops/s
+Iteration   3: 182442611,676 ops/s
+Iteration   4: 182306938,124 ops/s
+Iteration   5: 182416587,689 ops/s
+
+# Run progress: 36,00% complete, ETA 00:53:27
+# Fork: 4 of 5
+# Warmup Iteration   1: 182298672,997 ops/s
+# Warmup Iteration   2: 182070874,098 ops/s
+# Warmup Iteration   3: 182403129,695 ops/s
+# Warmup Iteration   4: 182437671,578 ops/s
+# Warmup Iteration   5: 182371185,975 ops/s
+Iteration   1: 182441165,022 ops/s
+Iteration   2: 182432620,679 ops/s
+Iteration   3: 182156755,506 ops/s
+Iteration   4: 182407338,009 ops/s
+Iteration   5: 182381945,291 ops/s
+
+# Run progress: 38,00% complete, ETA 00:51:47
+# Fork: 5 of 5
+# Warmup Iteration   1: 182222781,542 ops/s
+# Warmup Iteration   2: 182229258,608 ops/s
+# Warmup Iteration   3: 182340826,711 ops/s
+# Warmup Iteration   4: 182222815,228 ops/s
+# Warmup Iteration   5: 182429745,536 ops/s
+Iteration   1: 182419600,031 ops/s
+Iteration   2: 182292883,941 ops/s
+Iteration   3: 182427711,023 ops/s
+Iteration   4: 182433975,234 ops/s
+Iteration   5: 181971358,207 ops/s
+
+
+Result "ru.kildishev.NonThreadSafeBenchmark.singleThreadMeasure":
+  182359976,236 ±(99.9%) 91820,788 ops/s [Average]
+  (min, avg, max) = (181971358,207, 182359976,236, 182465182,468), stdev = 122578,126
+  CI (99.9%): [182268155,447, 182451797,024] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.SynchronizedMethodBenchmark.coreCountThreadMeasure
+
+# Run progress: 40,00% complete, ETA 00:50:07
+# Fork: 1 of 5
+# Warmup Iteration   1: 9514675,281 ops/s
+# Warmup Iteration   2: 9455287,257 ops/s
+# Warmup Iteration   3: 9608709,059 ops/s
+# Warmup Iteration   4: 9670287,665 ops/s
+# Warmup Iteration   5: 9660804,751 ops/s
+Iteration   1: 9593021,909 ops/s
+Iteration   2: 9557205,077 ops/s
+Iteration   3: 9598622,954 ops/s
+Iteration   4: 9629396,568 ops/s
+Iteration   5: 9080370,418 ops/s
+
+# Run progress: 42,00% complete, ETA 00:48:26
+# Fork: 2 of 5
+# Warmup Iteration   1: 9514401,924 ops/s
+# Warmup Iteration   2: 9515996,199 ops/s
+# Warmup Iteration   3: 9494595,540 ops/s
+# Warmup Iteration   4: 9482406,149 ops/s
+# Warmup Iteration   5: 9587439,126 ops/s
+Iteration   1: 9491865,204 ops/s
+Iteration   2: 8030227,150 ops/s
+Iteration   3: 9566503,036 ops/s
+Iteration   4: 9521176,538 ops/s
+Iteration   5: 9498941,190 ops/s
+
+# Run progress: 44,00% complete, ETA 00:46:46
+# Fork: 3 of 5
+# Warmup Iteration   1: 9561545,386 ops/s
+# Warmup Iteration   2: 10120904,665 ops/s
+# Warmup Iteration   3: 9489976,594 ops/s
+# Warmup Iteration   4: 9615042,614 ops/s
+# Warmup Iteration   5: 8479764,253 ops/s
+Iteration   1: 9486275,342 ops/s
+Iteration   2: 9578198,030 ops/s
+Iteration   3: 8004334,720 ops/s
+Iteration   4: 9474180,134 ops/s
+Iteration   5: 9594626,120 ops/s
+
+# Run progress: 46,00% complete, ETA 00:45:06
+# Fork: 4 of 5
+# Warmup Iteration   1: 9505211,007 ops/s
+# Warmup Iteration   2: 9486122,624 ops/s
+# Warmup Iteration   3: 9059860,632 ops/s
+# Warmup Iteration   4: 9757420,467 ops/s
+# Warmup Iteration   5: 9470755,950 ops/s
+Iteration   1: 9622407,533 ops/s
+Iteration   2: 9513275,541 ops/s
+Iteration   3: 9464018,271 ops/s
+Iteration   4: 9513392,970 ops/s
+Iteration   5: 9558658,029 ops/s
+
+# Run progress: 48,00% complete, ETA 00:43:26
+# Fork: 5 of 5
+# Warmup Iteration   1: 9511023,990 ops/s
+# Warmup Iteration   2: 9550785,855 ops/s
+# Warmup Iteration   3: 9499573,280 ops/s
+# Warmup Iteration   4: 9497677,002 ops/s
+# Warmup Iteration   5: 9498647,630 ops/s
+Iteration   1: 9385942,206 ops/s
+Iteration   2: 9493429,061 ops/s
+Iteration   3: 9503039,736 ops/s
+Iteration   4: 9435002,171 ops/s
+Iteration   5: 9491357,964 ops/s
+
+
+Result "ru.kildishev.SynchronizedMethodBenchmark.coreCountThreadMeasure":
+  9387418,715 ±(99.9%) 319025,226 ops/s [Average]
+  (min, avg, max) = (8004334,720, 9387418,715, 9629396,568), stdev = 425889,549
+  CI (99.9%): [9068393,489, 9706443,940] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.SynchronizedMethodBenchmark.singleThreadMeasure
+
+# Run progress: 50,00% complete, ETA 00:41:45
+# Fork: 1 of 5
+# Warmup Iteration   1: 137547781,167 ops/s
+# Warmup Iteration   2: 138258476,802 ops/s
+# Warmup Iteration   3: 137909714,743 ops/s
+# Warmup Iteration   4: 137314893,080 ops/s
+# Warmup Iteration   5: 137612283,338 ops/s
+Iteration   1: 138310753,913 ops/s
+Iteration   2: 137546488,283 ops/s
+Iteration   3: 138316752,988 ops/s
+Iteration   4: 138326543,304 ops/s
+Iteration   5: 138094426,360 ops/s
+
+# Run progress: 52,00% complete, ETA 00:40:05
+# Fork: 2 of 5
+# Warmup Iteration   1: 138137654,375 ops/s
+# Warmup Iteration   2: 138358404,206 ops/s
+# Warmup Iteration   3: 138340415,790 ops/s
+# Warmup Iteration   4: 138320396,734 ops/s
+# Warmup Iteration   5: 138341460,221 ops/s
+Iteration   1: 138318151,718 ops/s
+Iteration   2: 138383405,874 ops/s
+Iteration   3: 138392257,768 ops/s
+Iteration   4: 138292337,131 ops/s
+Iteration   5: 138423613,533 ops/s
+
+# Run progress: 54,00% complete, ETA 00:38:25
+# Fork: 3 of 5
+# Warmup Iteration   1: 138332198,838 ops/s
+# Warmup Iteration   2: 138219596,365 ops/s
+# Warmup Iteration   3: 138395296,443 ops/s
+# Warmup Iteration   4: 138400707,942 ops/s
+# Warmup Iteration   5: 138299523,930 ops/s
+Iteration   1: 138412133,920 ops/s
+Iteration   2: 138395111,281 ops/s
+Iteration   3: 138361891,662 ops/s
+Iteration   4: 138409646,466 ops/s
+Iteration   5: 138418177,190 ops/s
+
+# Run progress: 56,00% complete, ETA 00:36:45
+# Fork: 4 of 5
+# Warmup Iteration   1: 138280809,503 ops/s
+# Warmup Iteration   2: 138287396,435 ops/s
+# Warmup Iteration   3: 138382765,350 ops/s
+# Warmup Iteration   4: 138339258,419 ops/s
+# Warmup Iteration   5: 138392034,650 ops/s
+Iteration   1: 138384128,283 ops/s
+Iteration   2: 138291294,559 ops/s
+Iteration   3: 138397470,518 ops/s
+Iteration   4: 138338876,629 ops/s
+Iteration   5: 138324545,553 ops/s
+
+# Run progress: 58,00% complete, ETA 00:35:04
+# Fork: 5 of 5
+# Warmup Iteration   1: 138283002,401 ops/s
+# Warmup Iteration   2: 138248730,173 ops/s
+# Warmup Iteration   3: 137428998,351 ops/s
+# Warmup Iteration   4: 138257744,547 ops/s
+# Warmup Iteration   5: 138393005,456 ops/s
+Iteration   1: 138297474,375 ops/s
+Iteration   2: 138376970,602 ops/s
+Iteration   3: 138400881,682 ops/s
+Iteration   4: 138331960,463 ops/s
+Iteration   5: 138380079,631 ops/s
+
+
+Result "ru.kildishev.SynchronizedMethodBenchmark.singleThreadMeasure":
+  138317014,948 ±(99.9%) 130533,902 ops/s [Average]
+  (min, avg, max) = (137546488,283, 138317014,948, 138423613,533), stdev = 174259,024
+  CI (99.9%): [138186481,046, 138447548,849] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.SynchronizedMethodBenchmark.twoThreadMeasure
+
+# Run progress: 60,00% complete, ETA 00:33:24
+# Fork: 1 of 5
+# Warmup Iteration   1: 19988292,782 ops/s
+# Warmup Iteration   2: 17979354,412 ops/s
+# Warmup Iteration   3: 21138243,414 ops/s
+# Warmup Iteration   4: 23214788,830 ops/s
+# Warmup Iteration   5: 25244699,417 ops/s
+Iteration   1: 23989860,184 ops/s
+Iteration   2: 23247383,728 ops/s
+Iteration   3: 24519897,995 ops/s
+Iteration   4: 23104929,739 ops/s
+Iteration   5: 29966356,364 ops/s
+
+# Run progress: 62,00% complete, ETA 00:31:44
+# Fork: 2 of 5
+# Warmup Iteration   1: 20253364,955 ops/s
+# Warmup Iteration   2: 19825419,217 ops/s
+# Warmup Iteration   3: 21990556,740 ops/s
+# Warmup Iteration   4: 22730323,173 ops/s
+# Warmup Iteration   5: 22844622,691 ops/s
+Iteration   1: 22946527,978 ops/s
+Iteration   2: 21935292,435 ops/s
+Iteration   3: 21884243,147 ops/s
+Iteration   4: 20875728,352 ops/s
+Iteration   5: 20420176,498 ops/s
+
+# Run progress: 64,00% complete, ETA 00:30:04
+# Fork: 3 of 5
+# Warmup Iteration   1: 17875273,073 ops/s
+# Warmup Iteration   2: 18238673,753 ops/s
+# Warmup Iteration   3: 25027967,479 ops/s
+# Warmup Iteration   4: 21161427,898 ops/s
+# Warmup Iteration   5: 23471229,685 ops/s
+Iteration   1: 22391962,036 ops/s
+Iteration   2: 22267400,930 ops/s
+Iteration   3: 22137213,876 ops/s
+Iteration   4: 23120381,969 ops/s
+Iteration   5: 22783989,080 ops/s
+
+# Run progress: 66,00% complete, ETA 00:28:23
+# Fork: 4 of 5
+# Warmup Iteration   1: 18165694,732 ops/s
+# Warmup Iteration   2: 21003177,722 ops/s
+# Warmup Iteration   3: 22332919,638 ops/s
+# Warmup Iteration   4: 20310940,170 ops/s
+# Warmup Iteration   5: 21147538,140 ops/s
+Iteration   1: 22068708,452 ops/s
+Iteration   2: 22036562,612 ops/s
+Iteration   3: 22051085,063 ops/s
+Iteration   4: 22192245,509 ops/s
+Iteration   5: 24327258,205 ops/s
+
+# Run progress: 68,00% complete, ETA 00:26:43
+# Fork: 5 of 5
+# Warmup Iteration   1: 18384970,242 ops/s
+# Warmup Iteration   2: 18927413,365 ops/s
+# Warmup Iteration   3: 24641818,220 ops/s
+# Warmup Iteration   4: 24655108,300 ops/s
+# Warmup Iteration   5: 24066558,381 ops/s
+Iteration   1: 19859301,575 ops/s
+Iteration   2: 24254877,726 ops/s
+Iteration   3: 19856644,436 ops/s
+Iteration   4: 24186561,809 ops/s
+Iteration   5: 22497091,256 ops/s
+
+
+Result "ru.kildishev.SynchronizedMethodBenchmark.twoThreadMeasure":
+  22756867,238 ±(99.9%) 1480625,401 ops/s [Average]
+  (min, avg, max) = (19856644,436, 22756867,238, 29966356,364), stdev = 1976592,549
+  CI (99.9%): [21276241,837, 24237492,639] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.SynchronizedSectionBenchmark.coreCountThreadMeasure
+
+# Run progress: 70,00% complete, ETA 00:25:03
+# Fork: 1 of 5
+# Warmup Iteration   1: 9504230,080 ops/s
+# Warmup Iteration   2: 9428394,282 ops/s
+# Warmup Iteration   3: 10024953,344 ops/s
+# Warmup Iteration   4: 9973156,037 ops/s
+# Warmup Iteration   5: 9830129,958 ops/s
+Iteration   1: 9979324,639 ops/s
+Iteration   2: 9830998,996 ops/s
+Iteration   3: 9873956,546 ops/s
+Iteration   4: 9932347,085 ops/s
+Iteration   5: 9897857,552 ops/s
+
+# Run progress: 72,00% complete, ETA 00:23:23
+# Fork: 2 of 5
+# Warmup Iteration   1: 8885038,945 ops/s
+# Warmup Iteration   2: 9657331,684 ops/s
+# Warmup Iteration   3: 9884753,562 ops/s
+# Warmup Iteration   4: 9872898,246 ops/s
+# Warmup Iteration   5: 8321964,869 ops/s
+Iteration   1: 9810406,569 ops/s
+Iteration   2: 9938801,541 ops/s
+Iteration   3: 9933504,436 ops/s
+Iteration   4: 9922358,953 ops/s
+Iteration   5: 9875757,870 ops/s
+
+# Run progress: 74,00% complete, ETA 00:21:43
+# Fork: 3 of 5
+# Warmup Iteration   1: 9794357,414 ops/s
+# Warmup Iteration   2: 10534708,725 ops/s
+# Warmup Iteration   3: 9846865,266 ops/s
+# Warmup Iteration   4: 9991846,667 ops/s
+# Warmup Iteration   5: 9861005,822 ops/s
+Iteration   1: 9816914,913 ops/s
+Iteration   2: 9984737,082 ops/s
+Iteration   3: 9820608,773 ops/s
+Iteration   4: 9101953,304 ops/s
+Iteration   5: 9952384,954 ops/s
+
+# Run progress: 76,00% complete, ETA 00:20:02
+# Fork: 4 of 5
+# Warmup Iteration   1: 9712405,589 ops/s
+# Warmup Iteration   2: 9596150,521 ops/s
+# Warmup Iteration   3: 10133519,596 ops/s
+# Warmup Iteration   4: 9962865,247 ops/s
+# Warmup Iteration   5: 9950372,092 ops/s
+Iteration   1: 10046677,183 ops/s
+Iteration   2: 10009987,244 ops/s
+Iteration   3: 9948280,999 ops/s
+Iteration   4: 10000891,246 ops/s
+Iteration   5: 10069774,384 ops/s
+
+# Run progress: 78,00% complete, ETA 00:18:22
+# Fork: 5 of 5
+# Warmup Iteration   1: 9396720,113 ops/s
+# Warmup Iteration   2: 8864174,410 ops/s
+# Warmup Iteration   3: 9826646,329 ops/s
+# Warmup Iteration   4: 9914230,642 ops/s
+# Warmup Iteration   5: 9942964,327 ops/s
+Iteration   1: 9906845,574 ops/s
+Iteration   2: 9979473,849 ops/s
+Iteration   3: 9957234,499 ops/s
+Iteration   4: 9848584,420 ops/s
+Iteration   5: 9897920,640 ops/s
+
+
+Result "ru.kildishev.SynchronizedSectionBenchmark.coreCountThreadMeasure":
+  9893503,330 ±(99.9%) 134235,742 ops/s [Average]
+  (min, avg, max) = (9101953,304, 9893503,330, 10069774,384), stdev = 179200,875
+  CI (99.9%): [9759267,588, 10027739,072] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.SynchronizedSectionBenchmark.singleThreadMeasure
+
+# Run progress: 80,00% complete, ETA 00:16:42
+# Fork: 1 of 5
+# Warmup Iteration   1: 137805228,482 ops/s
+# Warmup Iteration   2: 137661008,731 ops/s
+# Warmup Iteration   3: 138393714,688 ops/s
+# Warmup Iteration   4: 137644112,613 ops/s
+# Warmup Iteration   5: 137585964,923 ops/s
+Iteration   1: 138381807,629 ops/s
+Iteration   2: 138343840,084 ops/s
+Iteration   3: 138386985,551 ops/s
+Iteration   4: 138399601,860 ops/s
+Iteration   5: 138315683,279 ops/s
+
+# Run progress: 82,00% complete, ETA 00:15:02
+# Fork: 2 of 5
+# Warmup Iteration   1: 137358149,215 ops/s
+# Warmup Iteration   2: 136472492,212 ops/s
+# Warmup Iteration   3: 137448577,058 ops/s
+# Warmup Iteration   4: 137934063,320 ops/s
+# Warmup Iteration   5: 137334637,525 ops/s
+Iteration   1: 135101630,427 ops/s
+Iteration   2: 136858837,642 ops/s
+Iteration   3: 137848278,430 ops/s
+Iteration   4: 137326665,723 ops/s
+Iteration   5: 138090156,371 ops/s
+
+# Run progress: 84,00% complete, ETA 00:13:21
+# Fork: 3 of 5
+# Warmup Iteration   1: 138001073,476 ops/s
+# Warmup Iteration   2: 137550424,806 ops/s
+# Warmup Iteration   3: 138214723,535 ops/s
+# Warmup Iteration   4: 138190907,602 ops/s
+# Warmup Iteration   5: 137007194,176 ops/s
+Iteration   1: 135500102,944 ops/s
+Iteration   2: 137350771,729 ops/s
+Iteration   3: 137790693,010 ops/s
+Iteration   4: 138225978,172 ops/s
+Iteration   5: 137632989,853 ops/s
+
+# Run progress: 86,00% complete, ETA 00:11:41
+# Fork: 4 of 5
+# Warmup Iteration   1: 137914042,318 ops/s
+# Warmup Iteration   2: 138019438,970 ops/s
+# Warmup Iteration   3: 137037114,756 ops/s
+# Warmup Iteration   4: 137266527,322 ops/s
+# Warmup Iteration   5: 137545518,059 ops/s
+Iteration   1: 137597488,360 ops/s
+Iteration   2: 136652143,694 ops/s
+Iteration   3: 137900021,076 ops/s
+Iteration   4: 137381534,290 ops/s
+Iteration   5: 138326858,840 ops/s
+
+# Run progress: 88,00% complete, ETA 00:10:01
+# Fork: 5 of 5
+# Warmup Iteration   1: 138230080,892 ops/s
+# Warmup Iteration   2: 138330710,095 ops/s
+# Warmup Iteration   3: 138281992,477 ops/s
+# Warmup Iteration   4: 138392596,109 ops/s
+# Warmup Iteration   5: 138386138,771 ops/s
+Iteration   1: 138298511,710 ops/s
+Iteration   2: 138388009,954 ops/s
+Iteration   3: 138401563,960 ops/s
+Iteration   4: 138299366,359 ops/s
+Iteration   5: 138370866,204 ops/s
+
+
+Result "ru.kildishev.SynchronizedSectionBenchmark.singleThreadMeasure":
+  137726815,486 ±(99.9%) 666522,670 ops/s [Average]
+  (min, avg, max) = (135101630,427, 137726815,486, 138401563,960), stdev = 889788,695
+  CI (99.9%): [137060292,816, 138393338,156] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-2ubuntu218.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.kildishev.SynchronizedSectionBenchmark.twoThreadMeasure
+
+# Run progress: 90,00% complete, ETA 00:08:21
+# Fork: 1 of 5
+# Warmup Iteration   1: 17780107,274 ops/s
+# Warmup Iteration   2: 18972814,959 ops/s
+# Warmup Iteration   3: 28654539,177 ops/s
+# Warmup Iteration   4: 28610850,576 ops/s
+# Warmup Iteration   5: 28592953,593 ops/s
+Iteration   1: 28457119,473 ops/s
+Iteration   2: 28428577,077 ops/s
+Iteration   3: 28283046,076 ops/s
+Iteration   4: 21667467,138 ops/s
+Iteration   5: 22428791,229 ops/s
+
+# Run progress: 92,00% complete, ETA 00:06:40
+# Fork: 2 of 5
+# Warmup Iteration   1: 15694458,159 ops/s
+# Warmup Iteration   2: 18393432,550 ops/s
+# Warmup Iteration   3: 21881596,185 ops/s
+# Warmup Iteration   4: 21919243,729 ops/s
+# Warmup Iteration   5: 17053504,699 ops/s
+Iteration   1: 22229263,882 ops/s
+Iteration   2: 21623479,730 ops/s
+Iteration   3: 25132505,935 ops/s
+Iteration   4: 21322496,004 ops/s
+Iteration   5: 31383152,213 ops/s
+
+# Run progress: 94,00% complete, ETA 00:05:00
+# Fork: 3 of 5
+# Warmup Iteration   1: 18011877,735 ops/s
+# Warmup Iteration   2: 19751416,866 ops/s
+# Warmup Iteration   3: 31627917,174 ops/s
+# Warmup Iteration   4: 21360449,852 ops/s
+# Warmup Iteration   5: 16757701,261 ops/s
+Iteration   1: 20932119,533 ops/s
+Iteration   2: 21673759,217 ops/s
+Iteration   3: 21173336,708 ops/s
+Iteration   4: 21655587,060 ops/s
+Iteration   5: 31863580,430 ops/s
+
+# Run progress: 96,00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: 18135007,336 ops/s
+# Warmup Iteration   2: 15183930,012 ops/s
+# Warmup Iteration   3: 19556201,415 ops/s
+# Warmup Iteration   4: 21685469,306 ops/s
+# Warmup Iteration   5: 22592472,728 ops/s
+Iteration   1: 20868964,556 ops/s
+Iteration   2: 26382262,066 ops/s
+Iteration   3: 22901108,064 ops/s
+Iteration   4: 26678299,352 ops/s
+Iteration   5: 33775959,773 ops/s
+
+# Run progress: 98,00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: 18391230,285 ops/s
+# Warmup Iteration   2: 18449713,844 ops/s
+# Warmup Iteration   3: 22435603,489 ops/s
+# Warmup Iteration   4: 19790458,184 ops/s
+# Warmup Iteration   5: 20216690,263 ops/s
+Iteration   1: 20023527,454 ops/s
+Iteration   2: 24234850,562 ops/s
+Iteration   3: 25295796,311 ops/s
+Iteration   4: 20307794,012 ops/s
+Iteration   5: 20429839,480 ops/s
+
+
+Result "ru.kildishev.SynchronizedSectionBenchmark.twoThreadMeasure":
+  24366107,333 ±(99.9%) 3010433,927 ops/s [Average]
+  (min, avg, max) = (20023527,454, 24366107,333, 33775959,773), stdev = 4018843,163
+  CI (99.9%): [21355673,407, 27376541,260] (assumes normal distribution)
+
+
+# Run complete. Total time: 01:23:31
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                             Mode  Cnt          Score         Error  Units
+LockBenchmark.coreCountThreadMeasure                 thrpt   25   12687540,493 ±  557056,292  ops/s
+LockBenchmark.singleThreadMeasure                    thrpt   25   48614869,449 ± 1329591,944  ops/s
+LockBenchmark.twoThreadMeasure                       thrpt   25    8153936,961 ±  209994,856  ops/s
+NonThreadSafeBenchmark.singleThreadMeasure           thrpt   25  182359976,236 ±   91820,788  ops/s
+SynchronizedMethodBenchmark.coreCountThreadMeasure   thrpt   25    9387418,715 ±  319025,226  ops/s
+SynchronizedMethodBenchmark.singleThreadMeasure      thrpt   25  138317014,948 ±  130533,902  ops/s
+SynchronizedMethodBenchmark.twoThreadMeasure         thrpt   25   22756867,238 ± 1480625,401  ops/s
+SynchronizedSectionBenchmark.coreCountThreadMeasure  thrpt   25    9893503,330 ±  134235,742  ops/s
+SynchronizedSectionBenchmark.singleThreadMeasure     thrpt   25  137726815,486 ±  666522,670  ops/s
+SynchronizedSectionBenchmark.twoThreadMeasure        thrpt   25   24366107,333 ± 3010433,927  ops/s
+
