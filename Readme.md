@@ -97,10 +97,10 @@ public class LockBenchmark {
 
 В виде накопительной гистрограммы это выглядит так:
 
-![picture](results/8/8.png)
+![picture](https://raw.githubusercontent.com/yozh1k/lockbenchmark/master/results/8/8.png)
 
 Результаты получились неоднозначные. Действительно, для небольшого количества конкурирующих потоков или вовсе в отсутствии
- конкуреции synchronized работает быстрее(причем разница в способе использования synchronized хоть и присутствует, но большой роли по сравнению с Lock не играет). Однако при увеличении числа конкурирующих потоков оказывается вперёд уже вырывается ReentrantLock.
+ конкуреции synchronized работает быстрее. Причем разница в способе использования synchronized для однопоточного варианта оказывается довольно существенной. Однако при увеличении числа конкурирующих потоков оказывается вперёд уже вырывается ReentrantLock.
 
 Я дополнительно прогнал те же измерения с использованием других версий JDK.
 
@@ -112,7 +112,7 @@ public class LockBenchmark {
 | singleThreadMeasure | 48614869,449 ops/sec | 138317014,948 ops/sec  | 137726815,486 ops/sec  |
 | twoThreadMeasure | 8153936,961 ops/sec | 22756867,238 ops/sec  | 24366107,333 ops/sec  |
 
-![picture](results/11/11.png)
+![picture](https://raw.githubusercontent.com/yozh1k/lockbenchmark/master/results/11/11.png)
 
 Результаты 13 версии
 
@@ -122,10 +122,10 @@ public class LockBenchmark {
 | singleThreadMeasure | 48648991,035 ops/sec | 138401909,855 ops/sec  | 138389513,615 ops/sec  |
 | twoThreadMeasure | 7975837,493 ops/sec | 28299790,093 ops/sec  | 27811727,651 ops/sec  |
 
-![picture](results/13/13.png)
+![picture](https://raw.githubusercontent.com/yozh1k/lockbenchmark/master/results/13/13.png)
 
 
-Результаты были аналогичными. Причины такого поведения кроются в том, что JDK использует 4 типа локов [https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/thread_basics.html]:
+Результаты были приблизительно аналогичными. Причины такого поведения кроются в том, что JDK использует 4 типа локов [https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/thread_basics.html]:
 * тонкие - локи, за которые отсутствует конкуренция между несколькими потоками
 * толстые  - локи, за которые есть конкуренция между несколькими потоками
 * рекурсивные  - локи, которые захватываются многократно одним и тем же потоком
