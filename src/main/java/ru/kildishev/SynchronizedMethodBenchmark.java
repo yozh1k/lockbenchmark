@@ -5,38 +5,37 @@ import org.openjdk.jmh.annotations.*;
 @State(Scope.Benchmark)
 public class SynchronizedMethodBenchmark {
     private NonThreadSafeCounter counter;
-    private SyncronizedCounterWrapper syncronizedCounterWrapper;
+    private SynchronizedCounterWrapper synchronizedCounterWrapper;
 
     @Setup(Level.Iteration)
     public void setUpCounter() {
-        syncronizedCounterWrapper = new SyncronizedCounterWrapper();
+        synchronizedCounterWrapper = new SynchronizedCounterWrapper();
         counter = new NonThreadSafeCounter();
     }
 
-    private class SyncronizedCounterWrapper {
+    private class SynchronizedCounterWrapper {
         private synchronized void doMeasure() {
             counter.increment();
         }
     }
 
-
     @Threads(1)
     @Benchmark
     public void singleThreadMeasure() {
-        syncronizedCounterWrapper.doMeasure();
+        synchronizedCounterWrapper.doMeasure();
     }
 
 
     @Threads(2)
     @Benchmark
     public void twoThreadMeasure() {
-        syncronizedCounterWrapper.doMeasure();
+        synchronizedCounterWrapper.doMeasure();
     }
 
     @Threads(8)
     @Benchmark
     public void coreCountThreadMeasure() {
-        syncronizedCounterWrapper.doMeasure();
+        synchronizedCounterWrapper.doMeasure();
     }
 
 }

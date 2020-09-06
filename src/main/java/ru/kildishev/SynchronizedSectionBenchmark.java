@@ -14,14 +14,13 @@ public class SynchronizedSectionBenchmark {
     }
 
     private void doMeasure() {
+        //noinspection SynchronizeOnNonFinalField
         synchronized (lock) {
             counter.increment();
         }
     }
 
-
     @Threads(1)
-
     @Benchmark
     public void singleThreadMeasure() {
         doMeasure();
@@ -29,14 +28,12 @@ public class SynchronizedSectionBenchmark {
 
 
     @Threads(2)
-
     @Benchmark
     public void twoThreadMeasure() {
         doMeasure();
     }
 
     @Threads(8)
-
     @Benchmark
     public void coreCountThreadMeasure() {
         doMeasure();

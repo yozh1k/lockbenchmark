@@ -26,7 +26,7 @@ public class NonThreadSafeCounter {
 ```
 * с использованием synchronized-блока
 ```java
-    private class SyncronizedCounterWrapper {
+    private class SynchronizedCounterWrapper {
         private synchronized void doMeasure() {
             counter.increment();
         }
@@ -87,40 +87,42 @@ public class LockBenchmark {
 Затем я прогнал получившиеся бенчмарки на своем компьютере.
 Конфигурация тестового окружения: Linux Mint 19 Cinnamon 3.8.9, Intel Core i7-3770 CPU @ 3.40GHz × 4
 
-В качестве JVM я использовал JDK 1.8.0_252. И получил следующие результаты.
+В качестве JVM я использовал JDK 1.8.0_252. И получил следующие результаты для количества операций в секунду.
 
 | | LockBenchmark	| SynchronizedMethodBenchmark | SynchronizedSectionBenchmark |
-| ------------- |:-------------:|:-------------:|:-----:|
-| coreCountThreadMeasure | 13139774,377 ops/sec  | 9233990,876 ops/sec  | 8895153,208 ops/sec  |
-| singleThreadMeasure | 49469746,932 ops/sec | 94795184,779 ops/sec  | 137784882,204 ops/sec  |
-| twoThreadMeasure | 7955459,563 ops/sec | 15201228,719 ops/sec  | 15421543,665 ops/sec  |
+| -------------|:---------------:|:-------------:|:-----:|
+| coreCountThreadMeasure | 13139774,377 | 9233990,876 | 8895153,208 |
+| singleThreadMeasure | 49469746,932 | 94795184,779 | 137784882,204 |
+| twoThreadMeasure | 7955459,563 | 15201228,719  | 15421543,665  |
 
 В виде накопительной гистрограммы это выглядит так:
 
 ![picture](https://raw.githubusercontent.com/yozh1k/lockbenchmark/master/results/8/8.png)
 
-Результаты получились неоднозначные. Действительно, для небольшого количества конкурирующих потоков или вовсе в отсутствии
- конкуреции synchronized работает быстрее. Причем разница в способе использования synchronized для однопоточного варианта оказывается довольно существенной. Однако при увеличении числа конкурирующих потоков оказывается вперёд уже вырывается ReentrantLock.
+Результаты получились неоднозначные. Действительно, для небольшого количества конкурирующих потоков или вовсе в отсутствие  конкуреции synchronized работает быстрее. Причем разница в способе использования synchronized для однопоточного варианта оказывается довольно существенной. Однако при увеличении числа конкурирующих потоков оказывается вперёд уже вырывается ReentrantLock.
 
 Я дополнительно прогнал те же измерения с использованием других версий JDK.
 
 Результаты 11 версии
+Здесь результаты примерно те же за исключением того, что разница при различных способах использования synchronized практически ичезает.
 
 | | LockBenchmark	| SynchronizedMethodBenchmark | SynchronizedSectionBenchmark |
 | ------------- |:-------------:|:-------------:|:-----:|
-| coreCountThreadMeasure | 12687540,493 ops/sec  | 9387418,715 ops/sec  | 9893503,33 ops/sec  |
-| singleThreadMeasure | 48614869,449 ops/sec | 138317014,948 ops/sec  | 137726815,486 ops/sec  |
-| twoThreadMeasure | 8153936,961 ops/sec | 22756867,238 ops/sec  | 24366107,333 ops/sec  |
+| coreCountThreadMeasure | 12687540,493 | 9387418,715 | 9893503,33 |
+| singleThreadMeasure | 48614869,449  | 138317014,948 | 137726815,486 |
+| twoThreadMeasure | 8153936,961  | 22756867,238 | 24366107,333 |
 
 ![picture](https://raw.githubusercontent.com/yozh1k/lockbenchmark/master/results/11/11.png)
 
 Результаты 13 версии
+Опять же, результаты примерно те же, но преимущество в скорости при использовании Lock с большим
+количеством потоков немного сокращается
 
 | | LockBenchmark	| SynchronizedMethodBenchmark | SynchronizedSectionBenchmark |
 | ------------- |:-------------:|:-------------:|:-----:|
-| coreCountThreadMeasure | 11920392,211 ops/sec  | 9381171,059 ops/sec  | 9751548,69 ops/sec  |
-| singleThreadMeasure | 48648991,035 ops/sec | 138401909,855 ops/sec  | 138389513,615 ops/sec  |
-| twoThreadMeasure | 7975837,493 ops/sec | 28299790,093 ops/sec  | 27811727,651 ops/sec  |
+| coreCountThreadMeasure | 11920392,211 | 9381171,059 | 9751548,69 |
+| singleThreadMeasure | 48648991,035  | 138401909,855 | 138389513,615 |
+| twoThreadMeasure | 7975837,493  | 28299790,093 | 27811727,651 |
 
 ![picture](https://raw.githubusercontent.com/yozh1k/lockbenchmark/master/results/13/13.png)
 
@@ -135,9 +137,7 @@ public class LockBenchmark {
  используются различные алгоритмы и комбинации локов, что ведет к различному поведению. В блоге Руслана Черемина(https://dev.cheremin.info) есть несколько статей,
   которые пытаются пролить на это свет.
 
-В качестве резюме я бы сформулировал следующее утверждение: исследование выполненно довольно поверхностно и не претендует
-на истину в последней инстанции, но очевидно показывает, что утверждать, что использование synchronized в общем случае
-предпочтительнее с точки зрения производительности, чем java.util.concurrent.locks.Lock, нельзя.
+В качестве резюме я бы сформулировал следующее утверждение: исследование выполненно довольно поверхностно и не претендует на истину в последней инстанции, но очевидно показывает, что утверждать, что использование synchronized в общем случае предпочтительнее с точки зрения производительности, чем java.util.concurrent.locks.Lock, нельзя.
 
 Исходный код и результаты доступны по адресу: https://github.com/yozh1k/lockbenchmark
 
@@ -148,12 +148,3 @@ mvn clean install
 java -jar target/benchmarks.jar
 
 ```
-
-
-
-
-
-
-
-
-
